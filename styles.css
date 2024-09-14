@@ -1,0 +1,178 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+  
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 2.5rem;
+    color: #424242;
+    width: 220px;
+    text-align: center;
+}
+
+.language-switch {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    background-color: #424242;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.language-switch:hover {
+    background-color: #616161;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.selection,
+.difficulty {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.selection button,
+.difficulty button,
+.controls button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #424242;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 10px;
+}
+
+.selection button.active,
+.difficulty button.active {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.selection button:hover,
+.difficulty button:hover,
+.controls button:hover {
+    background-color: #616161;
+    color: white;
+}
+
+.controls button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.controls button:hover {
+    background-color: white;
+    color: red;
+}
+
+.selection button,
+.difficulty button,
+.controls button,
+.language-switch {
+  width: 150px;
+  height: 60px;
+  text-align: center;
+}
+
+.difficulty button {
+    height: 40px;
+}
+.language-switch {
+    width: 120px;
+}
+  
+  .game-board {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 1px solid #424242;
+    background-color: #ffffff;
+  }
+  
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #424242;
+    font-size: 2em;
+    font-weight: bold;
+    color: #424242;
+    transition: background-color 0.2s;
+  }
+  
+  .cell:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .cell[data-filled="X"] {
+    color: #f44336;
+  }
+  
+  .cell[data-filled="O"] {
+    color: #2196f3;
+  }
+  .game-result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #424242;
+    min-height: 40px;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+    color: #424242;
+    font-family: Arial, sans-serif;
+  }
+  
